@@ -1,6 +1,6 @@
 ﻿using Cody.Domain.Commons;
 
-namespace Cody.Domain.Entities.Permissions;
+namespace Cody.Domain.Entities;
 
 public class Role : Auditable
 {
