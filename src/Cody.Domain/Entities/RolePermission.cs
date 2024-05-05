@@ -1,4 +1,4 @@
-﻿namespace Cody.Domain.Entities.Permissions;
+﻿namespace Cody.Domain.Entities;
 
 public class RolePermission
 {

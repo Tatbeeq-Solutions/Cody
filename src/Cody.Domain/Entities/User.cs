@@ -1,4 +1,4 @@
-﻿namespace Cody.Domain.Entities.Users;
+﻿namespace Cody.Domain.Entities;
 
 public class User
 {
