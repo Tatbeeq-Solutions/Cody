@@ -1,10 +1,13 @@
-﻿namespace Cody.Domain.Entities;
+﻿using Cody.Domain.Commons;
+using Cody.DataAccess.Enitties.Commons;
 
-public class Announcement
+namespace Cody.Domain.Entities;
+
+public class Announcement : Auditable
 {
     public string Name { get; set; }
     public string Content { get; set; }
     public long? MediaId { get; set; }
 
-    //public Asset Media { get; set; }
+    public Asset Media { get; set; }
 }

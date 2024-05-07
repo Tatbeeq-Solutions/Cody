@@ -1,6 +1,8 @@
-﻿namespace Cody.Domain.Entities;
+﻿using Cody.Domain.Commons;
 
-public class User
+namespace Cody.Domain.Entities;
+
+public class User : Auditable
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
@@ -9,5 +11,6 @@ public class User
     public string PasswordHash { get; set; }
     public long RoleId { get; set; }
 
-    //public Role Role { get; set; }
+    public Role Role { get; set; }
+    public IEnumerable<Notification> Notifications { get; set; }
 }

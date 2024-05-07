@@ -1,10 +1,12 @@
-﻿namespace Cody.Domain.Entities;
+﻿using Cody.Domain.Commons;
 
-public class RolePermission
+namespace Cody.Domain.Entities;
+
+public class RolePermission : Auditable
 {
     public long RoleId { get; set; }
     public long PermissionId { get; set; }
 
-    // public Role Role { get; set; }
-    // public Permission Permission { get; set; }
+     public Role Role { get; set; }
+     public Permission Permission { get; set; }
 }

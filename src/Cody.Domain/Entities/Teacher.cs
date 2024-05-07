@@ -10,7 +10,7 @@ public class Teacher :Auditable
     public long UserId { get; set; }
     public long? PictureId { get; set; }
 
-
     public User Detail { get; set; }
     public Asset Picture { get; set; }
+    public IEnumerable<Group> Groups { get; set; }
 }

@@ -16,4 +16,7 @@ public class Student : Auditable
     public User Detail { get; set; }
     public Asset Picture { get; set; }
     public Parent Parent { get; set; }
+    public IEnumerable<Group> Groups { get; set; }
+    public IEnumerable<LessonMark> LessonMarks { get; set; }
+    public IEnumerable<Attendance> Attendances { get; set; }
 }
