@@ -9,4 +9,5 @@ public class Lesson : Auditable
     public long GroupId { get; set; }
 
     public Group Group { get; set; }
+    public IEnumerable<Attendance> Attendances { get; set; }
 }

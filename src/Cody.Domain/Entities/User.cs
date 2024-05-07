@@ -12,4 +12,5 @@ public class User : Auditable
     public long RoleId { get; set; }
 
     public Role Role { get; set; }
+    public IEnumerable<Notification> Notifications { get; set; }
 }

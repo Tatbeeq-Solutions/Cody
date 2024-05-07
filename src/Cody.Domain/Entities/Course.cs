@@ -12,4 +12,5 @@ public class Course : Auditable
     public long? SyllabusId {  get; set; }
 
     public Asset Syllabus { get; set; }
+    public IEnumerable<Group> Groups { get; set; }
 }

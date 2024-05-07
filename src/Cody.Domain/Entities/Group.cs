@@ -17,4 +17,6 @@ public class Group : Auditable
     public Course Course { get; set; }
     public Teacher Teacher { get; set; }
     public GroupWeekDays WeekDay { get; set; }
+    public IEnumerable<Lesson> Lessons { get; set; }
+    public IEnumerable<Task> Tasks { get; set; }
 }

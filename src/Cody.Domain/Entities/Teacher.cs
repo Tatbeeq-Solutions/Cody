@@ -12,4 +12,5 @@ public class Teacher :Auditable
 
     public User Detail { get; set; }
     public Asset Picture { get; set; }
+    public IEnumerable<Group> Groups { get; set; }
 }
