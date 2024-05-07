@@ -1,6 +1,8 @@
-﻿namespace Cody.Domain.Entities;
+﻿using Cody.Domain.Commons;
 
-public class User
+namespace Cody.Domain.Entities;
+
+public class User : Auditable
 {
     public string FirstName { get; set; }
     public string LastName { get; set; }
