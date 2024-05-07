@@ -14,7 +14,7 @@ namespace Cody.Domain.Entities
         public string Description { get; set; }
         public int DurationInMonth {  get; set; }
         public string Prerequisites { get; set; }
-        public long SyllabusId {  get; set; }
+        public long? SyllabusId {  get; set; }
         public Asset Syllabus { get; set; }
     }
 }
