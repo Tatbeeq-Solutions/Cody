@@ -10,7 +10,7 @@ public class Group : Auditable
     public long TeacherId { get; set; }
     public Teacher Teacher { get; set; }
     public long WeekDayId { get; set; }
-    public GroupWeekDays GroupWeekDay { get; set; }
+    public GroupWeekDays WeekDay { get; set; }
     public int MaxEnrollment {  get; set; }
     public TimeOnly StartTime { get; set; }
     public TimeOnly EndTime { get; set; }
