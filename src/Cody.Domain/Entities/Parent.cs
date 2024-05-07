@@ -9,6 +9,7 @@ public class Parent : Auditable
     public string SecondPhone { get; set; }
     public long UserId { get; set; }
     public long? PictureId { get; set; }
+
     public User Detail { get; set; }
     public Asset Picture { get; set; }
 }

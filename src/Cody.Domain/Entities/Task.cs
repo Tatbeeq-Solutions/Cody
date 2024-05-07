@@ -14,8 +14,8 @@ public class Task : Auditable
     public string Description { get; set; }
     public DateTime Deadline { get; set; }
     public long GroupId {  get; set; }
-    public Group Group { get; set; }
     public long? FileId { get; set; }
+
+    public Group Group { get; set; }
     public Asset File { get; set; }
 }
-

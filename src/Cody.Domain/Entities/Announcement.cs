@@ -1,4 +1,6 @@
-﻿namespace Cody.Domain.Entities;
+﻿using Cody.DataAccess.Enitties.Commons;
+
+namespace Cody.Domain.Entities;
 
 public class Announcement
 {
@@ -6,5 +8,5 @@ public class Announcement
     public string Content { get; set; }
     public long? MediaId { get; set; }
 
-    //public Asset Media { get; set; }
+    public Asset Media { get; set; }
 }
