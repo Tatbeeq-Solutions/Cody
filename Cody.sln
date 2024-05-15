@@ -5,17 +5,23 @@ VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D55B337-199B-420F-BC47-77DC1A61A885}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cody.Api", "src\Cody.Api\Cody.Api.csproj", "{1E483740-EFE3-453F-B6FC-5276679E9630}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cody.Api", "src\Cody.Api\Cody.Api.csproj", "{1E483740-EFE3-453F-B6FC-5276679E9630}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cody.Domain", "src\Cody.Domain\Cody.Domain.csproj", "{8A2FB7C3-9BF7-4F78-8DB7-E70865FD78A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cody.Domain", "src\Cody.Domain\Cody.Domain.csproj", "{8A2FB7C3-9BF7-4F78-8DB7-E70865FD78A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cody.DataAccess", "src\Cody.DataAccess\Cody.DataAccess.csproj", "{7AF5A7AD-2583-493A-AD69-463C23A2C591}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cody.DataAccess", "src\Cody.DataAccess\Cody.DataAccess.csproj", "{7AF5A7AD-2583-493A-AD69-463C23A2C591}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cody.Service", "src\Cody.Service\Cody.Service.csproj", "{02166C1A-3A40-448F-8212-37BCFC4BCB57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cody.Service", "src\Cody.Service\Cody.Service.csproj", "{02166C1A-3A40-448F-8212-37BCFC4BCB57}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{112CCEFB-9DED-48A2-9640-F7799F500413}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cody.Test", "tests\Cody.Test\Cody.Test.csproj", "{55EA35C6-8649-4F03-8464-66502A34459D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cody.Test", "tests\Cody.Test\Cody.Test.csproj", "{55EA35C6-8649-4F03-8464-66502A34459D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28578050-3EA6-431A-A621-7DCB902276B1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
