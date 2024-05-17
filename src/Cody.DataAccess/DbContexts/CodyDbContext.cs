@@ -10,6 +10,7 @@ public class CodyDbContext : DbContext
 {
     public CodyDbContext(DbContextOptions<CodyDbContext> options) : base(options)
     {
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
         Database.EnsureCreated();
     }
 
