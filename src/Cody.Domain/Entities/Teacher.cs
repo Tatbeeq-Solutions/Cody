@@ -7,7 +7,7 @@ public class Teacher : Auditable
 {
     public string Profession { get; set; }
     public string About { get; set; }
-    public long UserId { get; set; }
+    public long DetailId { get; set; }
     public long? PictureId { get; set; }
 
     public User Detail { get; set; }

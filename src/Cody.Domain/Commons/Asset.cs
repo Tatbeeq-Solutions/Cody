@@ -1,6 +1,8 @@
-﻿namespace Cody.DataAccess.Enitties.Commons;
+﻿using Cody.Domain.Commons;
 
-public class Asset
+namespace Cody.DataAccess.Enitties.Commons;
+
+public class Asset : Auditable
 {
     public string Name { get; set; }
     public string Path { get; set; }

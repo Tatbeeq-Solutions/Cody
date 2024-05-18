@@ -1,4 +1,5 @@
 ﻿using Cody.DataAccess.Enitties;
+using Cody.DataAccess.Enitties.Commons;
 using Cody.DataAccess.Repositories;
 using Cody.Domain.Entities;
 
@@ -17,9 +18,10 @@ public interface IUnitOfWork : IDisposable
     IRepository<Parent> Parents { get; }
     IRepository<Student> Students { get; }
     IRepository<StudentGroup> StudentGroups { get; }
-    IRepository<Task> Tasks { get; }
+    IRepository<HomeTask> Tasks { get; }
     IRepository<Teacher> Teachers { get; }
     IRepository<User> Users { get; }
+    IRepository<Asset> Assets { get; }
 
     Task<bool> SaveAsync();
     Task BeginTransactionAsync();
