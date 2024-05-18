@@ -4,5 +4,5 @@ namespace Cody.Domain.Entities;
 
 public class GroupWeekDays : Auditable
 {
-    public string Name {  get; set; }
+    public string Name { get; set; }
 }

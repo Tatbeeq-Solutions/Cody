@@ -1,6 +1,6 @@
+using Cody.DataAccess.Enitties.Commons;
 using Cody.Domain.Commons;
 using Cody.Domain.Entities;
-using Cody.DataAccess.Enitties.Commons;
 
 namespace Cody.DataAccess.Enitties;
 

@@ -1,33 +1,27 @@
-﻿using Cody.Domain.Commons;
+﻿using Cody.DataAccess.DbContexts;
+using Cody.Domain.Commons;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
-using Cody.DataAccess.DbContexts;
 
 namespace Cody.DataAccess.Repositories;
 
-public class Repository<T> : IRepository<T> where T : Auditable
+public class Repository<T>(CodyDbContext context) : IRepository<T> where T : Auditable
 {
-    private readonly CodyDbContext context;
-    private readonly DbSet<T> set;
-    public Repository(CodyDbContext context)
-    {
-        this.context = context;
-        this.set = context?.Set<T>();
-    }
+    private readonly DbSet<T> set = context?.Set<T>();
 
-    public async ValueTask<T> InsertAsync(T entity)
+    public async Task<T> InsertAsync(T entity)
     {
         return (await set.AddAsync(entity)).Entity;
     }
 
-    public async ValueTask<T> UpdateAsync(T entity)
+    public async Task<T> UpdateAsync(T entity)
     {
         entity.UpdatedAt = DateTime.UtcNow;
         set.Update(entity);
         return await Task.FromResult(entity);
     }
 
-    public async ValueTask<T> DeleteAsync(T entity)
+    public async Task<T> DeleteAsync(T entity)
     {
         entity.IsDeleted = true;
         entity.DeletedAt = DateTime.UtcNow;
@@ -35,12 +29,13 @@ public class Repository<T> : IRepository<T> where T : Auditable
         return await Task.FromResult(entity);
     }
 
-    public async ValueTask<T> DropAsync(T entity)
+    public async Task<T> DropAsync(T entity)
     {
         return await Task.FromResult(set.Remove(entity).Entity);
     }
 
-    public async ValueTask<T> SelectAsync(Expression<Func<T, bool>> expression, string[] includes = null)
+    public async Task<T> SelectAsync(Expression<Func<T, bool>> expression,
+                                     string[] includes = null)
     {
         var query = set.Where(expression);
 
@@ -51,7 +46,7 @@ public class Repository<T> : IRepository<T> where T : Auditable
         return await query.FirstOrDefaultAsync();
     }
 
-    public async ValueTask<IEnumerable<T>> SelectAsEnumerableAsync(
+    public async Task<IEnumerable<T>> SelectAsEnumerableAsync(
         Expression<Func<T, bool>> expression = null,
         string[] includes = null,
         bool isTracked = true)
@@ -81,7 +76,6 @@ public class Repository<T> : IRepository<T> where T : Auditable
 
         if (!isTracked)
             query.AsNoTracking();
-
 
         return query;
     }

@@ -1,14 +1,14 @@
-﻿using Cody.Domain.Commons;
-using Cody.DataAccess.Enitties.Commons;
+﻿using Cody.DataAccess.Enitties.Commons;
+using Cody.Domain.Commons;
 
 namespace Cody.Domain.Entities;
 
-public class Task : Auditable
+public class HomeTask : Auditable
 {
-    public string Title {  get; set; }
+    public string Title { get; set; }
     public string Description { get; set; }
     public DateTime Deadline { get; set; }
-    public long GroupId {  get; set; }
+    public long GroupId { get; set; }
     public long? FileId { get; set; }
 
     public Group Group { get; set; }

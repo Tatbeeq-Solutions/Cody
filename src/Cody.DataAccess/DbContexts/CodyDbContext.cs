@@ -1,7 +1,7 @@
 ﻿using Cody.DataAccess.Enitties;
 using Cody.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using Task = Cody.Domain.Entities.Task;
+using HomeTask = Cody.Domain.Entities.HomeTask;
 
 
 namespace Cody.DataAccess.DbContexts;
@@ -23,12 +23,9 @@ public class CodyDbContext : DbContext
     public DbSet<LessonMark> LessonMarks { get; set; }
     public DbSet<Notification> Notifications { get; set; }
     public DbSet<Parent> Parents { get; set; }
-    public DbSet<Permission> Permissions { get; set; }
-    public DbSet<Role> Roles { get; set; }
-    public DbSet<RolePermission> RolePermissions { get; set; }
     public DbSet<Student> Students { get; set; }
     public DbSet<StudentGroup> StudentGroups { get; set; }
-    public DbSet<Task> Tasks { get; set; }
+    public DbSet<HomeTask> Tasks { get; set; }
     public DbSet<Teacher> Teachers { get; set; }
     public DbSet<User> Users { get; set; }
 }

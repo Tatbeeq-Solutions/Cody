@@ -1,5 +1,5 @@
-﻿using Cody.Domain.Enums;
-using Cody.Domain.Commons;
+﻿using Cody.Domain.Commons;
+using Cody.Domain.Enums;
 
 namespace Cody.Domain.Entities;
 

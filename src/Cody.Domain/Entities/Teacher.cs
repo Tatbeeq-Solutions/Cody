@@ -1,12 +1,12 @@
-﻿using Cody.Domain.Commons;
-using Cody.DataAccess.Enitties.Commons;
+﻿using Cody.DataAccess.Enitties.Commons;
+using Cody.Domain.Commons;
 
 namespace Cody.Domain.Entities;
 
-public class Teacher :Auditable
+public class Teacher : Auditable
 {
-    public string Profession {  get; set; }
-    public string About {  get; set; }
+    public string Profession { get; set; }
+    public string About { get; set; }
     public long UserId { get; set; }
     public long? PictureId { get; set; }
 

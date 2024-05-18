@@ -8,15 +8,15 @@ public class Group : Auditable
     public long CourseId { get; set; }
     public long TeacherId { get; set; }
     public long WeekDayId { get; set; }
-    public int MaxEnrollment {  get; set; }
+    public int MaxEnrollment { get; set; }
     public TimeOnly StartTime { get; set; }
     public TimeOnly EndTime { get; set; }
     public DateOnly StartDate { get; set; }
-    public DateOnly EndDate { get; set;}
+    public DateOnly EndDate { get; set; }
 
     public Course Course { get; set; }
     public Teacher Teacher { get; set; }
     public GroupWeekDays WeekDay { get; set; }
     public IEnumerable<Lesson> Lessons { get; set; }
-    public IEnumerable<Task> Tasks { get; set; }
+    public IEnumerable<HomeTask> Tasks { get; set; }
 }
