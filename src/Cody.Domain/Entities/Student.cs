@@ -8,7 +8,7 @@ public class Student : Auditable
 {
     public DateTime BirthDay { get; set; }
     public int TotalPoints { get; set; }
-    public long UserId { get; set; }
+    public long DetailId { get; set; }
     public long? PictureId { get; set; }
     public long? ParentId { get; set; }
 

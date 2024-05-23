@@ -1,5 +1,6 @@
 ﻿using Cody.DataAccess.DbContexts;
 using Cody.DataAccess.Enitties;
+using Cody.DataAccess.Enitties.Commons;
 using Cody.DataAccess.Repositories;
 using Cody.Domain.Entities;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -22,17 +23,18 @@ public class UnitOfWork : IUnitOfWork
     public IRepository<Parent> Parents { get; }
     public IRepository<Student> Students { get; }
     public IRepository<StudentGroup> StudentGroups { get; }
-    public IRepository<Task> Tasks { get; }
+    public IRepository<HomeTask> Tasks { get; }
     public IRepository<Teacher> Teachers { get; }
     public IRepository<User> Users { get; }
-
+    public IRepository<Asset> Assets { get; }
 
     public UnitOfWork(CodyDbContext context)
     {
         this.context = context;
         Users = new Repository<User>(this.context);
-        Tasks = new Repository<Task>(this.context);
+        Assets = new Repository<Asset>(this.context);
         Groups = new Repository<Group>(this.context);
+        Tasks = new Repository<HomeTask>(this.context);
         Lessons = new Repository<Lesson>(this.context);
         Parents = new Repository<Parent>(this.context);
         Courses = new Repository<Course>(this.context);
@@ -56,7 +58,7 @@ public class UnitOfWork : IUnitOfWork
         return await this.context.SaveChangesAsync() >= 0;
     }
 
-    public async ValueTask BeginTransactionAsync()
+    public async Task BeginTransactionAsync()
     {
         transaction = await this.context.Database.BeginTransactionAsync();
     }
