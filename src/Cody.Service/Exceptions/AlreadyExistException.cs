@@ -8,5 +8,5 @@ public class AlreadyExistException : Exception
 
     public AlreadyExistException(string message, Exception exception) { }
 
-    public static int StatusCode => 409;
+    public int StatusCode => 409;
 }
