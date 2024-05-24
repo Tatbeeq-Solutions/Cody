@@ -8,5 +8,5 @@ public class ArgumentIsNotValidException : Exception
 
     public ArgumentIsNotValidException(string message, Exception exception) { }
 
-    public static int StatusCode => 400;
+    public int StatusCode => 400;
 }
